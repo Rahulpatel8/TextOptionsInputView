@@ -11,7 +11,13 @@
 @implementation TextMenuBar
 
 -(IBAction)optionClicked:(UIBarButtonItem*)sender {
-    _completion((int)sender.tag);
+    if (_completion) {
+        _completion((int)sender.tag);
+    }
+    
+    if (self.delegate) {
+        [self.delegate didSelectBarButton:sender];
+    }
 }
 
 @end

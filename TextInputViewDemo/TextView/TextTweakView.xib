@@ -43,22 +43,19 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARj-XB-HJa">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                     <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-SG-myJ">
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-SG-myJ">
                             <rect key="frame" x="67" y="117" width="293" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="minimumTrackTintColor" red="0.84313725490000002" green="0.13725490200000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="thumbTintColor" red="0.84313725490000002" green="0.13725490200000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="sliderShadowChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="32R-N8-wpy"/>
                             </connections>
                         </slider>
-                        <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="4ub-7y-lIh">
+                        <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="center" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="4ub-7y-lIh">
                             <rect key="frame" x="18" y="116" width="26" height="32"/>
-                            <autoresizingMask key="autoresizingMask"/>
                         </imageView>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-3C-C5n">
+                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-3C-C5n">
                             <rect key="frame" x="67" y="56" width="293" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="minimumTrackTintColor" red="0.84313725490000002" green="0.13725490200000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="thumbTintColor" red="0.84313725490000002" green="0.13725490200000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,12 +63,23 @@
                                 <action selector="sliderAlphaChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="acc-hj-MHp"/>
                             </connections>
                         </slider>
-                        <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="opecity" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-jn-614">
-                            <rect key="frame" x="16" y="56" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                        <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="center" image="opecity" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-jn-614">
+                            <rect key="frame" x="16" y="58.5" width="25" height="25"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="7P3-SG-myJ" firstAttribute="centerY" secondItem="ARj-XB-HJa" secondAttribute="centerY" constant="-18" id="4VB-XM-DQY"/>
+                        <constraint firstAttribute="trailing" secondItem="7P3-SG-myJ" secondAttribute="trailing" constant="17" id="8Bl-Ub-gYU"/>
+                        <constraint firstItem="6gZ-jn-614" firstAttribute="centerY" secondItem="ARj-XB-HJa" secondAttribute="centerY" constant="-79" id="Cbd-P1-qi2"/>
+                        <constraint firstItem="4ub-7y-lIh" firstAttribute="leading" secondItem="ARj-XB-HJa" secondAttribute="leading" constant="18" id="DNz-1K-4Ri"/>
+                        <constraint firstItem="9Ls-3C-C5n" firstAttribute="leading" secondItem="6gZ-jn-614" secondAttribute="trailing" constant="23" id="Gnc-PD-Y2t"/>
+                        <constraint firstItem="4ub-7y-lIh" firstAttribute="centerY" secondItem="ARj-XB-HJa" secondAttribute="centerY" constant="-18" id="HdV-Eg-Om8"/>
+                        <constraint firstItem="9Ls-3C-C5n" firstAttribute="centerY" secondItem="ARj-XB-HJa" secondAttribute="centerY" id="MbM-2t-5fN"/>
+                        <constraint firstItem="7P3-SG-myJ" firstAttribute="leading" secondItem="4ub-7y-lIh" secondAttribute="trailing" constant="25" id="ULv-ta-o2g"/>
+                        <constraint firstItem="6gZ-jn-614" firstAttribute="leading" secondItem="ARj-XB-HJa" secondAttribute="leading" constant="16" id="ZjQ-Uj-t2t"/>
+                        <constraint firstAttribute="trailing" secondItem="9Ls-3C-C5n" secondAttribute="trailing" constant="17" id="eVx-SL-eYo"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

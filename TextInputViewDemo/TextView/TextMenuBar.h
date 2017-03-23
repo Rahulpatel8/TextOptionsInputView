@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void (^MenuCompletion)(int buttonIndex);
+@protocol MenuBarProtocol <NSObject>
+@required
+-(void)didSelectBarButton:(UIBarButtonItem*)sender;
+@end
+typedef void(^MenuCompletion) (int buttonIndex);
 @interface TextMenuBar : UIToolbar
 @property MenuCompletion completion;
+@property (strong, nonatomic) id<MenuBarProtocol> delegate;
 @end
+

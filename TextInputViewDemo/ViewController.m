@@ -32,7 +32,6 @@
     [self.textField becomeFirstResponder];
     __weak ViewController *weakSelf = self;
     menuBar.completion = ^(int index) {
-        
         if (index == 1) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf.textField setInputView:nil];
